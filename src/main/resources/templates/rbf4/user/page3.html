@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 3</title>
+</head>
+<body>
+<th:block th:switch="${user.role}">
+    <div th:case="'ADMIN'">
+        <h3 th:text="|${user.name}는 ADMIN 입니다|"></h3>
+        <button th:text="'관리자만 보이는 버튼'"></button>
+    </div>
+    <h3 th:case="'USER'" th:text="|${user.name}는 USER 입니다|"></h3>
+    <h3 th:case="'DEVELOPER'" th:text="|${user.name}는 DEVELOPER 입니다|"></h3>
+    <h3 th:case="*">나가</h3>
+</th:block>
+</body>
+</html>

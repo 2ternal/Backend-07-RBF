@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Page2</title>
+    <style>
+        .content-con {
+            margin-top: 10px
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h3 th:text="#{article.write}">게시물 작성</h3>
+    <form method="post" th:object="${article}">
+        <div>
+            <span th:text="#{article.title}">제목 : </span>
+            <input type="text" th:field="*{title}">
+        </div>
+        <div>
+            <span th:text="#{article.content}">내용 : </span>
+            <textarea th:field="*{content}" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <button type="submit" th:text="#{button.submit}">작성</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
